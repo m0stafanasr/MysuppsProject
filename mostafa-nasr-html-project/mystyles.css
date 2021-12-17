@@ -1,0 +1,406 @@
+*{
+    margin: 0;
+}
+.bar{
+    background-color: black;
+    height: auto;
+    text-align: center;
+    position:initial ;
+}
+
+#offersimg{
+    width: 5%;
+    padding-left: 2%;
+    float: center;
+}
+
+#text{
+    height:100%;
+
+    color: rgb(255, 249, 241);
+    font-size: 25px;
+    vertical-align:100%;
+font-family: 'Times New Roman', Times, serif;
+
+}
+
+#callimg{
+    width: 7%;
+    padding-left:2%;
+    vertical-align: 90%;
+}
+
+.mainbar{
+padding-left: 16%;
+    height: 20%;
+    padding-top: 10px;
+}
+#logo{
+
+    width: 12%;
+}
+
+#search{
+    text-align: center;
+    width: 50%;
+    vertical-align: 100%;
+    border-style: solid;
+    border-radius: 7px;
+    height: 40px;
+    font-size: 15px;
+    font-weight: bolder;
+    border: none;
+    background-color: rgba(150, 150, 220, 0.3);   
+    outline-color : rgb(104, 107, 116);
+}
+.searchs{
+    padding-left: 7%;  
+}
+
+.searchi{
+    padding-left: 2%;
+}
+
+.mainicon{
+    width: 40px;
+}
+
+.cat{
+    list-style-type: none;
+    margin-top: 1%; 
+    padding-left: 20%;
+    position: relative;
+    height: max-content; 
+    white-space: nowrap;
+}
+
+.category1{
+    list-style-type: none;
+    float: left;
+    text-align: center;
+    margin-left: 4%;
+    vertical-align: 80%;
+    overflow: hidden;
+    white-space: nowrap;
+}
+#categories{
+    position:absolute;
+    z-index: 100;
+    display: block;
+    width: 98.96%;
+    background-color: white;
+    left: 0;
+    box-shadow: 1px 10px 10px -2px grey;
+    padding: 10px;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.category a{
+    float: left;
+    display: block;
+    color: rgb(204, 148, 43);
+    text-align: center;
+    margin-left: 4%;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    overflow: hidden;
+}
+
+.category :focus{
+    color: rgb(85, 65, 27);
+    background-color: rgb(255, 176, 30);
+    padding-left: 6px;
+    padding-right: 6px;
+    border-radius: 10%;
+}
+
+.category a:hover{
+    color: rgb(85, 65, 27);
+    
+}
+
+.category #categories{
+    display: none;
+
+}
+
+#shop:hover #categories{
+    display: block;
+    padding: 10px;
+    overflow: hidden;
+}
+
+#ads{
+    display: inline-block;
+}
+#smlimg{
+    
+    margin-top: 4%;
+    width: 50%;
+    box-shadow: 5px 5px 15px rgb(223, 220, 195);
+    border-radius: 12px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+#smlimg:hover{
+    opacity: 0.8;
+}
+
+#smlimg1{
+
+    width: 50%;
+    border-radius: 12px;
+    box-shadow: 3px 3px 10px rgb(223, 220, 195);
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+#smlimg1:hover{
+    opacity: 0.8;
+}
+
+#bigimg{
+  
+    margin-left: 35%;
+    margin-right: auto;
+    height:68vh;
+    margin-top: 4%;
+    border-radius: 12px;
+    box-shadow: -3px -3px 10px rgb(223, 220, 195);
+}
+#bigimg:hover{
+    opacity: 0.8;
+}
+#slider{
+    width: 50%;
+    border-radius: 12px;
+    box-shadow: 3px 3px 10px rgb(223, 220, 195);
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    margin-top: 3%;
+}
+#slider:hover{
+    opacity: 0.8;
+}
+
+.offers{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+    margin-top: 3%;
+}
+.card{
+    border-radius: 8px;
+    border-color: rgb(153, 153, 153);
+    border-width: 1px;
+    border-style: solid;
+    box-shadow: 0px 1px 5px #888;
+    min-height: 120px;
+    max-height: auto;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+#sale{
+    color: rgb(255, 255, 255);
+    padding-left: 20px;
+    border-radius: 8px;
+    float: left;
+    width: 30%;
+    
+    opacity: 0.5;
+}
+
+/* image styling in card*/
+
+.imgcrd1{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30vh;
+    height: 20vh;
+    object-fit:contain;
+
+}
+.imgcrd2{
+    display: none;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30vh;
+    align-items: stretch;
+    object-fit: contain;
+    height: 20vh;
+    
+}
+.crd:hover .imgcrd1{
+    display: none;
+}
+.crd:hover .imgcrd2{
+    display: block;
+}
+
+.rate{
+    width: 160px;
+    padding-left: 15px;
+}
+.star{
+    width: 20px;
+}
+
+.before{
+    text-decoration:line-through;
+}
+.after{
+    font-weight: bold;
+}
+.info{
+    margin-left: 15px;
+    margin-bottom: 15px;
+    text-overflow: clip;
+}
+
+.cart{
+    margin-left: auto;
+    margin-right: auto;
+    width: 25px;
+}
+
+.newarrivals{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+    margin-top: 3%;
+}
+
+.appdiv{
+    background-color: rgb(173, 113, 0);
+    margin-top: 3%;
+    display: inline-block;
+    color: white;
+}
+
+#apps{
+    display: inline-block;
+    margin-left: 15%;
+    width: 38%;
+    margin-top: 1%;
+}
+
+.app{
+    margin-top: 1%;
+    padding-left: 20px;
+    width: 30%;
+}
+
+#subscribe{
+    display: inline-block;
+    margin-left: 3%;
+    margin-top: 1%;
+    vertical-align:top;
+    width: 40%;
+}
+
+#box{
+    width: 60%;
+    height: 40px; 
+    display: inline-block;  
+}
+#submit{
+    width: 100px;
+    height: 40px;
+    display: inline-block;
+    background-color: rgb(22, 14, 0);
+    border-radius: 10px;
+    color: white;
+}
+.footer{
+    background-color: rgb(96, 59, 0);
+    color: white;
+    display: inline-block;
+    text-overflow: clip;
+    width: 100%;
+}
+#logo1{
+    width: 40%;
+    padding-left: 60px;
+    padding-top: 40px;
+    padding-bottom: 10px;
+}
+#footer{
+    display: inline-block;
+    padding-right: auto;
+    width: 40%;
+}
+#about{
+    font-size: 20px;
+    padding-left: 60px;
+    width: 60%;
+    padding-bottom: 10px;
+}
+.links{
+    display: inline-block;
+    
+}
+.link{
+
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    padding-left: 25px;
+}
+
+.quick{
+    float: left;
+    color: rgb(255, 176, 30);
+    font-size: 20px;
+    padding-left: 80px;
+}
+.data a{
+    
+    font-size: 20px;
+    display: block;
+  color: white;
+  text-align: center;
+  padding-top: 4px;
+  text-decoration: none;
+}
+
+.data{
+    list-style-type:none;
+    padding: 4px;
+}
+
+.data a:hover{
+    color: rgb(255, 176, 30);
+}
+
+.follow{
+    display: inline-block;
+    width: 30%;
+    padding-left: 80px;
+    vertical-align: top;
+    margin-top: 68px;
+    color: rgb(255, 176, 30);
+    font-size: 20px;
+}
+#fb{
+    display: inline-block;
+    width: 10%;
+}
+#yt{
+    display: inline-block;
+    width: 10%;
+}
+#insta{
+    display: inline-block;
+    width: 10%;
+}
+.follow p{
+    margin-bottom: 20px;
+}
