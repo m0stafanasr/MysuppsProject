@@ -14,6 +14,8 @@
     float: center;
 }
 
+
+
 #text{
     height:100%;
 
@@ -242,7 +244,7 @@ padding-left: 16%;
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 60%;
+    width: 61%;
     margin-top: 3%;
 }
 .card{
@@ -325,7 +327,7 @@ padding-left: 16%;
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 60%;
+    width: 61%;
     margin-top: 3%;
 }
 
@@ -455,4 +457,65 @@ padding-left: 16%;
 }
 .follow p{
     margin-bottom: 20px;
+}
+
+
+
+
+/* login page */
+#login{
+    color: #000000;
+    border-style: solid;
+    border-width: 0.5px;
+    box-shadow: 0px 0px 4px 1px grey;
+    margin:auto;
+    width: 25%;
+    text-align: center;
+    margin-top: 5%;
+    position: relative;
+    align-items: center;
+    font-size: 40px;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+}
+.data{
+    margin-top: 10px;
+}
+
+#login input{
+    height: 40px;
+    width: 380px;
+    
+    font-size: 20px;
+    border-style: none;
+    border-bottom: solid;
+ 
+}
+#login input:focus{
+    border-style: none;
+}
+#loginAvatar{
+    font-size: 200px;
+    color: rgb(221 150 17);
+}
+#remember{
+    font-size: 30px;
+    margin-top: 25px;
+}
+#check{
+    margin-right: 15px;
+    width: 21px !important;
+    vertical-align: middle;
+}
+#submit{
+    background-color: rgb(221 150 17);
+    margin: 10% auto;
+    width: 40%;
+    border-style: none;
+    box-shadow: 1px 1px 5px 1px grey;
+    font-size: 20px;
+    font-weight: bold;
 }
