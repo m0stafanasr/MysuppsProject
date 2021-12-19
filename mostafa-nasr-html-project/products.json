@@ -268,5 +268,137 @@
       "rate": 2.9,
       "count": 3
     }
+
   }
+  ,
+  {
+    "id": 21,
+    "title": "premier green coffee blend",
+    "price": 105,
+    "description": "natural extract of green coffee beans that will help in increasing the burning of fats and carbohydrates in the body ",
+    "category": "weight-loss",
+    "image": "https://www.metro-markets.com/storage/products/BL04680.jpg",
+    "company": "premier",
+    "rating": {
+      "rate": 3,
+      "Count": 5
+    }
+  },
+    {
+      "id": 22,
+      "title": "muscletech Pure CLA",
+      "price": 450,
+      "description": "start to lose all your fats with pure Dosage of CLA from muscletech",
+      "category": "weight-loss",
+      "image": "https://www.maxmuscleelite.com/web/image/product.product/1596/image_1920/%5B631656604504%5D%20Muscletech%20Pure%20CLA-90Serv.-90SoftGels?unique=618ef77",
+      "company": "muscletech",
+      "rating": {
+        "rate": 4.2,
+        "count": 5
+      }
+    },
+      {
+        "id": 23,
+        "title": "Nutrex Research Lipo 6 Cla",
+        "price": 500,
+        "description": "Non-Stimulant and Natural Fat Burner",
+        "category": "weight-loss",
+        "image": "https://www.maxmuscleelite.com/web/image/product.product/1512/image_1920/%5B853237000189%5D%20Nutrex%20Research%20Lipo%206%20Cla-90Serv.-90Caps.?unique=d3ae8b7",
+        "company": "nutrex research",
+        "rating": {
+          "rate": 3.8,
+          "count": 5
+        }
+      },
+        {
+          "id": 24,
+          "title": "organic nation green sculpture",
+          "price": 60,
+          "description": "Organic Nation always look for solutions to help you maintain a healthy lifestyle, So we thought that we need to help you in losing weight without suffering a bad taste.,",
+          "category": "weight-loss",
+          "image": "https://www.maxmuscleelite.com/web/image/product.product/6117/image_1920/%5B6224008427124%5D%20Organic%20Nation%20Green%20sculpture%20With%20Wild%20Mint%26Sage-20%20Packs?unique=ab89dc1",
+          "company": "organic nation",
+          "rating": {
+            "rate": 4,
+            "count": 5
+          }
+        },
+          {
+            "id": 25,
+            "title": "nutrex research lipo 6 carnitine",
+            "price": 500,
+            "description": "non stimulant fat burner that converts fats into energy and helps in increasing your body endurance through training",
+            "category": "weight-loss",
+            "image": "https://www.maxmuscleelite.com/web/image/product.product/708/image_1920/%5B853237000424%5D%20Nutrex%20Research%20Lipo%206%20carnitine-60Serv.-120Caps.?unique=a5f4adc",
+            "company": "nutrex research",
+            "rating": {
+              "rate": 5,
+              "count": 5
+            }
+          },
+          {
+            "id": 26,
+            "title": "universal animal cuts",
+            "price": 1150,
+            "description": "Complex Cutting Stak from Eight complexes: thermogenic complex, metabolic complex,  thyroid complex, diuretic complex,  nootropic complex,  cortisol-inhibiting complex,  appetite suppression complex, and special bioavailability complex.,",
+            "category": "weight-loss",
+            "image": "https://www.maxmuscleelite.com/web/image/product.product/1947/image_1920/%5B039442030146%5D%20Universal%C2%A0Animal%20Cuts-42Serv.-42Packs?unique=a7e2920",
+            "company": "universal",
+            "rating": {
+              "rate": 5,
+              "count": 5
+            }
+          },
+          {
+            "id": 27,
+            "title": "nutrex research lipo 6 black",
+            "price": 435,
+            "description": "fat destroyer, powerful thermogenic fat burner, strong energy and appetite suppression",
+            "category": "weight-loss",
+            "image": "https://www.maxmuscleelite.com/web/image/product.product/881/image_1920/%5B853237000714%5D%20Nutrex%20Research%20Lipo%206%20Black%20Ultra%20Concentrat-60Serv.-60Caps.?unique=f89bfd8",
+            "company": "nutrex research",
+            "rating": {
+              "rate": 4,
+              "count": 5
+            }
+          },
+            {
+              "id": 28,
+              "title": "Ronnie Coleman Signature Series L-Carnitine Energy",
+              "price": 500,
+              "description": "help in transfering your fats into energy and increase your energy levels",
+              "category": "weight-loss",
+              "image": "https://www.maxmuscleelite.com/web/image/product.product/7612/image_1920/%5B850015625022%5D%20Ronnie%20Coleman%20Signature%20Series%20L-Carnitine%20Energy%201500Mg-31Serv.-473Ml-Mango%20Pineapple?unique=da029a6",
+              "company": "ronnie coleman",
+              "rating": {
+                "rate": 5,
+                "count": 5
+              }
+            },
+            {
+              "id": 29,
+              "title": "redcon1 double tap",
+              "price": 800,
+              "description": "ultimate formula of fatburner that will give you double the result than any other fat burner",
+              "category": "weight-loss",
+              "image": "https://www.maxmuscleelite.com/web/image/product.product/7460/image_1920/%5B810044571073%5D%20Redcon1%20Double%20Tap%20Fat%20Burner-40Serv.-232G-BlueRaspberry?unique=cad68eb",
+              "company": "redcon1",
+              "rating": {
+                "rate": 5,
+                "count": 5
+              }
+            },
+            {
+              "id": 30,
+              "title": "warrior blaze",
+              "price": 400,
+              "description": "Warrior Blaze Reborn is an Elite Thermogenic Formula. It is designed to support your healthy weight goals.",
+              "category": "weight-loss",
+              "company": "warrior",
+              "rating": {
+                "rate": 3.5,
+                "count": 5
+              }
+            }
+
 ]
