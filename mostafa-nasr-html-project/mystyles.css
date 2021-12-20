@@ -1,4 +1,5 @@
 
+
 *{
     margin: 0;
     box-sizing: border-box;
@@ -306,10 +307,8 @@ padding-left: 16%;
     margin-bottom: 20px;
 }
 
-*{
-    margin: 0;
-    box-sizing: border-box;
-}
+
+
 .bar{
     background-color: black;
     height: auto;
@@ -835,4 +834,3 @@ background-color: #fff;
     border-width: 0.5px;
     box-shadow: 0px 0px 4px 1px grey;
 }
-
