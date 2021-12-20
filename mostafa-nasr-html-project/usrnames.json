@@ -1,0 +1,22 @@
+[
+    {
+  "users":{
+        "user1":{
+            "username": "Mostafanasr",
+            "password": "mostafa123",
+            "email": "mostafanasr2020@gmail.com"
+        },
+        "user2":{
+            "username":"Esraamohame",
+            "password": "esraa123",
+            "email": "esraa.mohamed.fcis@gmail.com"
+        },
+        "user3":{
+            "username": "Taqwareda",
+            "password": "taqwa123",
+            "email": "taqwareda3@gmail.com"
+        }
+    }  
+}
+    
+]
