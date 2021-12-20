@@ -1,5 +1,6 @@
 *{
     margin: 0;
+    box-sizing: border-box;
 }
 .bar{
     background-color: black;
@@ -103,6 +104,7 @@ padding-left: 16%;
         color: black;
     }
     .dropdownmenu ul {
+        float: left;
         list-style: none;
         width: 100%;
     }
@@ -118,7 +120,7 @@ padding-left: 16%;
         font: bold 12px/20px sans-serif;
         padding: 10px 25px;
         text-align: center;
-        font-weight: 900;
+        font-size: 20px;
         text-decoration: none;
         -webkit-transition: all .25s ease;
         -moz-transition: all .25s ease;
@@ -128,7 +130,7 @@ padding-left: 16%;
     }
    
 .dropdownmenu{
-    margin: 20px 140px;
+   padding: 20px 0;
 }
     .dropdownmenu ul, .dropdownmenu li {
         margin: 0;
@@ -166,12 +168,10 @@ padding-left: 16%;
     width: 100%;
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    margin-top: 100px;
+    align-content: center;
 
 }
 .ads div{
-    width: 50%;
     margin: 10px;
 }
 .ads img{
@@ -185,6 +185,55 @@ padding-left: 16%;
     transform: scale(1.1);
     transition: 1s;
 }
+
+
+/* start artivles */
+.articles{
+ padding-bottom: 60px;
+    position: relative;
+    text-align: center;
+}  
+.articles h2{
+    padding: 50px 0;
+    font-size: 30px;
+}  
+.articles .container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+    gap:40px;
+}
+.articles .box img{
+
+  width: 100%;
+}
+.articles .box{
+  box-shadow: 0 1px 5px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.rate{
+    width: 100%;
+    padding-left: 10px;
+    
+}
+.box .rate img{
+    width: 20px;
+}
+.btnmore{
+    background-color: #fc0;
+    color: black;
+    font-size: 50px;
+    text-align: center;
+    padding: 40px 0;
+    margin-top: 70px;
+}
+.btnmore a{
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+
 #smlimg{
     
     margin-top: 4%;
@@ -268,39 +317,8 @@ padding-left: 16%;
 
 /* image styling in card*/
 
-.imgcrd1{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 30vh;
-    height: 20vh;
-    object-fit:contain;
 
-}
-.imgcrd2{
-    display: none;
-    margin-left: auto;
-    margin-right: auto;
-    width: 30vh;
-    align-items: stretch;
-    object-fit: contain;
-    height: 20vh;
-    
-}
-.crd:hover .imgcrd1{
-    display: none;
-}
-.crd:hover .imgcrd2{
-    display: block;
-}
 
-.rate{
-    width: 160px;
-    padding-left: 15px;
-}
-.star{
-    width: 20px;
-}
 
 .before{
     text-decoration:line-through;
@@ -310,8 +328,8 @@ padding-left: 16%;
 }
 .info{
     margin-left: 15px;
-    margin-bottom: 15px;
-    text-overflow: clip;
+    margin-top: 15px;
+    line-height: 40px;
 }
 
 .cart{
