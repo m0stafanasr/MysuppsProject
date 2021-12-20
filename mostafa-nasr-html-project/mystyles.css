@@ -15,8 +15,6 @@
     float: center;
 }
 
-
-
 #text{
     height:100%;
 
@@ -76,120 +74,6 @@ padding-left: 16%;
 .container{
     margin-left:auto;
     margin-right:auto;
-
-}
-@media(min-width:768px){
-    .container{
-        width: 750px;
-        
-    }
-  }
-  
-  @media(min-width:992px){
-      .container{
-          width: 970px;
-  
-      }
-    }
-    @media(min-width:1200px){
-      .container{
-          width: 1170px;
-        
-      }
-    }
-    .icon{
-        font-size: 35px;
-        margin: 0 10px;
-        color: #fc0;
-        cursor: pointer;
-        vertical-align: super;
-    }
-    .icon:hover{
-        color: black;
-    }
-    .dropdownmenu ul {
-        list-style: none;
-        width: 100%;
-    }
-    .dropdownmenu li {
-        float: left;
-        position: relative;
-        width:auto;
-    }
-    .dropdownmenu a {
-        background: white;
-        color: black;
-        display: block;
-        font: bold 12px/20px sans-serif;
-        padding: 10px 25px;
-        text-align: center;
-        font-weight: 900;
-        text-decoration: none;
-        -webkit-transition: all .25s ease;
-        -moz-transition: all .25s ease; 
-        -ms-transition: all .25s ease;
-        -o-transition: all .25s ease;
-        transition: all .25s ease;
-    }
-   
-.dropdownmenu{
-    margin: 20px 140px;
-}
-    .dropdownmenu ul, .dropdownmenu li {
-        margin: 0;
-        padding: 0;
-    }
-    .dropdownmenu li:hover a {
-        background: #fc0;
-    }
-    #submenu {
-        color: white;
-        left: 0;
-        opacity: 0;
-        position: absolute;
-        top: 35px;
-        visibility: hidden;
-        z-index: 1;
-    }
-    li:hover ul#submenu {
-        opacity: 1;
-        top: 40px;	
-        visibility: visible;
-    }
-    #submenu li {
-        float: none;
-        width: 100%;
-    }
-    #submenu a:hover {
-        background: #fc0;
-    }
-    #submenu a {
-        background-color:#000000;
-        color: white;
-    }
-.ads{
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 100px;
-
-}
-.ads div{
-    width: 50%;
-    margin: 10px;
-}
-.ads img{
-    width: 100%;
-    min-width: 100%;
-    min-height: 100%;
-    border-radius: 35px;
-    cursor: pointer;
-}
-.ads img:hover{
-    transform: scale(1.1);
-    transition: 1s;
-=======
 }
 @media(min-width:768px){
     .container{
@@ -332,7 +216,6 @@ padding-left: 16%;
     width: 100%;
     padding-left: 10px;
     
-
 }
 .box .rate img{
     width: 20px;
@@ -407,7 +290,7 @@ padding-left: 16%;
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 61%;
+    width: 60%;
     margin-top: 3%;
 }
 .card{
@@ -459,7 +342,7 @@ padding-left: 16%;
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 61%;
+    width: 60%;
     margin-top: 3%;
 }
 
