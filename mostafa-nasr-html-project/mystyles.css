@@ -91,6 +91,15 @@ padding-left: 16%;
     .icon:hover{
         color: black;
     }
+   #stick{
+
+       position: sticky;
+       top: -1px;
+       z-index: 1;
+       padding-top: 30px;
+       padding-bottom:30px;
+       background-color: white;
+   }
     .dropdownmenu ul {
         float: left;
         list-style: none;
@@ -126,6 +135,7 @@ padding-left: 16%;
     }
     .dropdownmenu li:hover a {
         background: #fc0;
+        
     }
     #submenu {
         color: white;
@@ -144,6 +154,7 @@ padding-left: 16%;
     #submenu li {
         float: none;
         width: 100%;
+       
     }
     #submenu a:hover {
         background: #fc0;
