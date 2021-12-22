@@ -15,7 +15,7 @@ a{
 }
 
 #offersimg{
-    width: 5%;
+    width: 9%;
     padding-left: 2%;
     float: center;
 }
@@ -31,7 +31,7 @@ font-family: 'Times New Roman', Times, serif;
 }
 
 #callimg{
-    width: 7%;
+    width: 15%;
     padding-left:2%;
     vertical-align: 90%;
 }
@@ -184,8 +184,6 @@ padding-left: 16%;
     transform: scale(1.1);
     transition: 1s;
 }
-
-
 /* start artivles */
 .articles{
  padding-bottom: 60px;
