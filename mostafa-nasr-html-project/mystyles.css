@@ -517,6 +517,7 @@ padding-left: 16%;
   box-shadow: 0 1px 5px;
     border-radius: 10px;
     overflow: hidden;
+    position: relative;
 }
 
 .rate{
@@ -639,6 +640,11 @@ padding-left: 16%;
     line-height: 40px;
 }
 
+.info a{
+    position: absolute;
+    right: 0px;
+    bottom: 2px;
+}
 .cart{
     margin-left: auto;
     margin-right: auto;
@@ -704,29 +710,35 @@ padding-left: 16%;
 }
 .footer .container{
     margin: auto;
+    padding-bottom: 40px;
 }
 .footer .container .row{
     display: flex;
     flex-wrap: wrap;
 }
 .footer-col{
-    width: 25%;
-    padding: 0 15px;
+    width: 33.33%;
+    padding: 0 20px;
 }
 .footer-col h2{
-    font-size: 18px;
-    color: #fff;
-    margin-bottom: 30px;
-    font-weight: 500;
+    font-size: 30px;
+    font-weight: bold;
+    color: #fc0;
+    margin-bottom: 25px;
+ 
 }
 .footer-col ul li{
     margin-bottom: 10px;
 }
+#logofooter{
+    width: 100%;
+}
 .footer-col ul li a{
-    font-size: 16px;
-    color: #bbb;
+    font-size: 20px;
+    color: white;
     display: block;
-    
+    text-decoration: none;
+
 }
 .footer-col ul li a:hover{
   padding-left: 8px;
