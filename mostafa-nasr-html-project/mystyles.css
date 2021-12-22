@@ -782,6 +782,7 @@ background-color: #fff;
     -moz-border-radius: 8px;
     -ms-border-radius: 8px;
     -o-border-radius: 8px;
+    font-size: 2vw;
 }
 .data{
     margin-top: 10px;
@@ -789,7 +790,7 @@ background-color: #fff;
 
 #login input{
     height: 40px;
-    width: 380px;
+    width: 20vw;
     
     font-size: 20px;
     border-style: none;
@@ -800,11 +801,11 @@ background-color: #fff;
     border-style: none;
 }
 #loginAvatar{
-    font-size: 200px;
+    font-size: 12vw;
     color: rgb(221 150 17);
 }
 #remember{
-    font-size: 30px;
+    
     margin-top: 25px;
 }
 #check{
@@ -827,7 +828,21 @@ background-color: #fff;
     cursor: pointer;
 }
 
+#loginbutton,#logoutbutton{
+    margin: 10px auto;
 
+    width: 7vw;
+    height: 2vw;
+    background-color: black;
+    color: white;
+    font-size: 1vw;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+    box-shadow:  0px 0px 4px 1px grey;
+}
 #loginbar{
     position: absolute;
     float: left;
@@ -837,12 +852,17 @@ background-color: #fff;
     text-align: center;
     margin-left: 40%;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 1vw;
     font-weight: bold;
-    width: 8%;
-    height: 25%;
+    width: 10vw;
+    height: 15%;
     z-index: 100;
     border-style: solid;
     border-width: 0.5px;
     box-shadow: 0px 0px 4px 1px grey;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
 }

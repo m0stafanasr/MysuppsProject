@@ -24,12 +24,13 @@
             <a id="logo"><img src="./media/logo.jpg" id="logo"></a>
             <input type="search" placeholder="search" id="search">
             <a href="#"><i class="fas fa-shopping-cart icon"></i></a>
-            <a href="login.html"> <i class="fas fa-user icon" onmouseover="show()"> </i>
+            <a href="login.html"> <i class="fas fa-user icon" onmouseover="show()"> </i></a>
                 <div id="loginbar" onmouseleave="hide()">
                     welcome!
-                    <a href="login.html"><button id="loginbutton">Login</button></a>
+                    <a href="login.html"><button id="loginbutton" style="display: block;">Login</button></a>
+                    <a href="login.html"><button id="logoutbutton" style="display: none;" onclick="logout()">Logout</button></a>
                 </div>
-            </a>
+            
         </div>
 
     </div>
