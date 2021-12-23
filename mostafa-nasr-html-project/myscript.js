@@ -66,11 +66,40 @@ function logout(){
         document.getElementById("logoutbutton").style.display = "none";
         sessionStorage.removeItem("username");
         sessionStorage.removeItem("password");
+        localStorage.removeItem("username");
+        localStorage.removeItem("password");
         location.reload();
 }
 
+/*display protein*/
+
+function showsupp(c){
+
+    var product = c.innerHTML;
+    
+    var xhr = new XMLHttpRequest();
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState == 4 && xhr.status == 200) {
+            jsonObj = xhr.responseText;
+            jsObj = JSON.parse(jsonObj);
+            debugger;
+            
+            let obj = jsObj.find(function (o) {
+                return o.category == product;
+            });
+            if(obj==null){
+                alert("fi 8aga 3'lt")
+            }else{
+                console.log(obj);
+            }
+              
+        }
+    }
 
 
+    xhr.open("GET", "products.json");
+    xhr.send("")
+}
 
 
 /*view products*/
