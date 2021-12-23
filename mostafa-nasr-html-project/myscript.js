@@ -144,6 +144,9 @@ function viewSupps() {
             price.innerHTML = jsobj[i].price + "LE";
             info.appendChild(price);
             var Tocard = document.createElement('a');
+            Tocard.addEventListener('click',function(){
+                    addtolocalstorag(i);
+            });
             var icon = document.createElement('i');
             icon.className = "fas fa-shopping-cart icon";
             Tocard.appendChild(icon);
@@ -153,6 +156,21 @@ function viewSupps() {
         }
 
     }
+  function  addtolocalstorag(index){
+      var user = localStorage.getItem("username");
+      if(localStorage.getItem(user)){
+        var x=  JSON.parse( localStorage.getItem(user));
+        x.push(index)
+      
+        localStorage.setItem(user,JSON.stringify(x));
+      }
+      else{
+        var data=[];
+        data.push(index);
+        localStorage.setItem(user,JSON.stringify(data));
+      }
+      
+  }
 }
 
 viewSupps();

@@ -15,7 +15,7 @@ a{
 }
 
 #offersimg{
-    width: 5%;
+    width: 9%;
     padding-left: 2%;
     float: center;
 }
@@ -31,7 +31,7 @@ font-family: 'Times New Roman', Times, serif;
 }
 
 #callimg{
-    width: 7%;
+    width: 15%;
     padding-left:2%;
     vertical-align: 90%;
 }
@@ -91,6 +91,15 @@ padding-left: 16%;
     .icon:hover{
         color: black;
     }
+   #stick{
+
+       position: sticky;
+       top: -1px;
+       z-index: 1;
+       padding-top: 30px;
+       padding-bottom:30px;
+       background-color: white;
+   }
     .dropdownmenu ul {
         float: left;
         list-style: none;
@@ -126,6 +135,7 @@ padding-left: 16%;
     }
     .dropdownmenu li:hover a {
         background: #fc0;
+        
     }
     #submenu {
         color: white;
@@ -144,6 +154,7 @@ padding-left: 16%;
     #submenu li {
         float: none;
         width: 100%;
+       
     }
     #submenu a:hover {
         background: #fc0;
@@ -173,8 +184,6 @@ padding-left: 16%;
     transform: scale(1.1);
     transition: 1s;
 }
-
-
 /* start artivles */
 .articles{
  padding-bottom: 60px;
@@ -517,6 +526,7 @@ padding-left: 16%;
   box-shadow: 0 1px 5px;
     border-radius: 10px;
     overflow: hidden;
+    position: relative;
 }
 
 .rate{
@@ -639,6 +649,11 @@ padding-left: 16%;
     line-height: 40px;
 }
 
+.info a{
+    position: absolute;
+    right: 0px;
+    bottom: 2px;
+}
 .cart{
     margin-left: auto;
     margin-right: auto;
@@ -704,29 +719,35 @@ padding-left: 16%;
 }
 .footer .container{
     margin: auto;
+    padding-bottom: 40px;
 }
 .footer .container .row{
     display: flex;
     flex-wrap: wrap;
 }
 .footer-col{
-    width: 25%;
-    padding: 0 15px;
+    width: 33.33%;
+    padding: 0 20px;
 }
 .footer-col h2{
-    font-size: 18px;
-    color: #fff;
-    margin-bottom: 30px;
-    font-weight: 500;
+    font-size: 30px;
+    font-weight: bold;
+    color: #fc0;
+    margin-bottom: 25px;
+ 
 }
 .footer-col ul li{
     margin-bottom: 10px;
 }
+#logofooter{
+    width: 100%;
+}
 .footer-col ul li a{
-    font-size: 16px;
-    color: #bbb;
+    font-size: 20px;
+    color: white;
     display: block;
-    
+    text-decoration: none;
+
 }
 .footer-col ul li a:hover{
   padding-left: 8px;
