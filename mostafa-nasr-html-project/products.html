@@ -1,21 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous">
     <link rel="stylesheet" href="mystyles.css">
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
-    <title>test</title>
-    
+    <title>Document</title>
 </head>
-<body onload="search()" onunload="close()">
+
+<body>
     <div class="bar" id="offersBar">
         <div id="text"> transform your body with special offers</div>
         <div class="offerbar"><img src="./media/offer.png" id="offersimg"></div>
         <div class="offerbar"> <img src="./media/callus.png" id="callimg"></div>
     </div>
- 
 
     <div class="mainbar">
         <div class="container">
@@ -64,10 +66,9 @@
             </nav>
         </div>
     </div>
-    
     <div class="articles">
-        <h2>  Products </h2>
-        <div id="boxs" class="container">
+        <h2 id="title">   </h2>
+        <div id="show" class="container">
 
         </div>
     </div>
@@ -102,41 +103,25 @@
         </div>
 
     </div>
-        <script >
-function search(){
-    if(localStorage.getItem('searchWord')){
-        var xhr = new XMLHttpRequest();
-        xhr.open("GET", "products.json");
-        xhr.onreadystatechange = function () {
-            if (xhr.readyState == 4) {
-                if (xhr.status == 200) {
-                    var jsobj = JSON.parse(xhr.response);
-                    for(let i=0 ;i<jsobj.length ;i++){
-                        var desc= jsobj[i].title.toUpperCase(); 
-                        if(desc.indexOf(localStorage.getItem('searchWord'))>=0) {
-                              display(jsobj,i);
-                        } 
-                    }
-
-                }}}
-                xhr.send();
-    }
-}
-function close(){
-  localStorage.removeItem("searchWord");
-}
-function display(jsobj,i){
+    <script>
+       
+        var obj = JSON.parse(localStorage.getItem("cat"));
+        for(let i=0; i<obj.length; i++){
+            display1(obj,i);
+        }
+        console.log(obj[2]);
+        function display1(obj,i){
     var box = document.createElement('div');
             box.className = "box";
             var img = document.createElement('img');
             img.className = "imgproduct";
-            img.src = jsobj[i].image;
+            img.src = obj[i].image;
 
             box.appendChild(img);
             var rate = document.createElement('div');
             rate.className = "rate";
 
-            for (let j = 0; j < jsobj[i].rating.rate; j++) {
+            for (let j = 0; j < obj[i].rating.rate; j++) {
                 var imgrate = document.createElement('img');
                 imgrate.src = "./media/star.png";
                 rate.appendChild(imgrate);
@@ -144,14 +129,14 @@ function display(jsobj,i){
             box.appendChild(rate);
             var info = document.createElement('div');
             var title = document.createElement('h4');
-            title.innerHTML = jsobj[i].title;
+            title.innerHTML = obj[1].title;
             info.appendChild(title);
             var info2 = document.createElement('div');
             info2.className="info";
             info2.classList.add("row");
             var price = document.createElement('span');
             price.className="col-6";
-            price.innerHTML = jsobj[i].price + "LE";
+            price.innerHTML = obj[i].price + "LE";
             info2.appendChild(price);
             var Tocard = document.createElement('a');
             Tocard.className="col-6";
@@ -164,24 +149,11 @@ function display(jsobj,i){
             info2.appendChild(Tocard);
             info.appendChild(info2)
             box.appendChild(info);
-            boxs.appendChild(box);
-                                       }
-function  addtolocalstorag(index){
-      var user = localStorage.getItem("username");
-      if(localStorage.getItem(user)){
-        var x=  JSON.parse( localStorage.getItem(user));
-        x.push(index)
-      
-        localStorage.setItem(user,JSON.stringify(x));
-      }
-      else{
-        var data=[];
-        data.push(index);
-        localStorage.setItem(user,JSON.stringify(data));
-      }
-    }
-      </script>
-
-     
-</body>
+            show.appendChild(box);
+        }
+        display1(obj);
+        document.getElementById("title").innerHTML = obj[1].category.value;
+    </script>
+    <script src="myscript.js"></script>
+    </body>
 </html>
