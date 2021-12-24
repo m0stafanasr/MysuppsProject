@@ -38,7 +38,7 @@ function submit() {
 
 
     xhr.open("GET", "usrnames.json");
-    xhr.send("")
+    xhr.send("");
 
 
 }
@@ -104,6 +104,8 @@ function showsupp(c){
 
 /*view products*/
 function viewSupps() {
+    var word=  document.getElementById("search");
+    var reg = /[a-zA-z]{4,}/;
     var xhr = new XMLHttpRequest();
     xhr.open("GET", "products.json");
     xhr.onreadystatechange = function () {
@@ -111,6 +113,17 @@ function viewSupps() {
             if (xhr.status == 200) {
                 var jsobj = JSON.parse(xhr.response);
                 Display(jsobj);
+                ///////////////////////////////
+                word.addEventListener('blur',function(){
+                 if( reg.test(word.value)==true){
+                     localStorage.setItem("searchWord",word.value.toUpperCase());
+                      window.open("searched.html");  
+                 }
+                 else{
+                   alert("can't search");
+                 }
+                 
+                   });
             }
         }
     }
@@ -136,21 +149,26 @@ function viewSupps() {
             }
             box.appendChild(rate);
             var info = document.createElement('div');
-            info.className = "info";
             var title = document.createElement('h4');
             title.innerHTML = jsobj[i].title;
             info.appendChild(title);
+            var info2 = document.createElement('div');
+            info2.className="info";
+            info2.classList.add("row");
             var price = document.createElement('span');
+            price.className="col-6";
             price.innerHTML = jsobj[i].price + "LE";
-            info.appendChild(price);
+            info2.appendChild(price);
             var Tocard = document.createElement('a');
+            Tocard.className="col-6";
             Tocard.addEventListener('click',function(){
                     addtolocalstorag(i);
             });
             var icon = document.createElement('i');
             icon.className = "fas fa-shopping-cart icon";
             Tocard.appendChild(icon);
-            info.appendChild(Tocard);
+            info2.appendChild(Tocard);
+            info.appendChild(info2)
             box.appendChild(info);
             boxs.appendChild(box);
         }
@@ -174,3 +192,6 @@ function viewSupps() {
 }
 
 viewSupps();
+
+
+ 
