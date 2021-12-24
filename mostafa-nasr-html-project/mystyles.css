@@ -91,6 +91,8 @@ padding-left: 16%;
     .icon:hover{
         color: black;
     }
+
+    /*start navbar*/
    #stick{
 
        position: sticky;
@@ -129,7 +131,7 @@ padding-left: 16%;
 .dropdownmenu{
    padding: 20px 0;
 }
-    .dropdownmenu ul, .dropdownmenu li {
+ .dropdownmenu ul, .dropdownmenu li {
         margin: 0;
         padding: 0;
     }
@@ -163,26 +165,33 @@ padding-left: 16%;
         background-color:#000000;
         color: white;
     }
-.ads{
+/*start ads*/
+.row{
+display: flex;
+flex-wrap: wrap;
+}
+[class*="col-"] {
+padding: 15px;
+/*for mobile*/
+width: 100%;
+text-align: center;
+}
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+img{
     width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-content: center;
-
-}
-.ads div{
-    margin: 10px;
-}
-.ads img{
-    width: 100%;
-    min-width: 100%;
-    min-height: 100%;
-    border-radius: 35px;
-    cursor: pointer;
-}
-.ads img:hover{
-    transform: scale(1.1);
-    transition: 1s;
+    max-width: 100%;
+    height: 100%;
 }
 /* start artivles */
 .articles{
@@ -218,19 +227,7 @@ padding-left: 16%;
 .box .rate img{
     width: 20px;
 }
-.btnmore{
-    background-color: #fc0;
-    color: black;
-    font-size: 50px;
-    text-align: center;
-    padding: 40px 0;
-    margin-top: 70px;
-}
-.btnmore a{
-    text-decoration: none;
-    color: black;
-    cursor: pointer;
-}
+
 .info a{
     float: right;
 }
@@ -278,31 +275,9 @@ padding-left: 16%;
     opacity: 0.5;
 }
 
-/* image styling in card*/
 
 
 
-
-.before{
-    text-decoration:line-through;
-}
-.after{
-    font-weight: bold;
-}
-.info{
-    margin-left: 15px;
-    margin-top: 15px;
-    line-height: 40px;
-}
-
-
-.footer{
-    background-color: rgb(96, 59, 0);
-    color: white;
-    display: inline-block;
-    text-overflow: clip;
-    width: 100%;
-}
 #logo1{
     width: 40%;
     padding-left: 60px;
@@ -325,52 +300,11 @@ padding-left: 16%;
     position:initial ;
 }
 
-#offersimg{
-    width: 5%;
-    padding-left: 2%;
-    float: center;
-}
-
-#text{
-    height:100%;
-
-    color: rgb(255, 249, 241);
-    font-size: 25px;
-    vertical-align:100%;
-font-family: 'Times New Roman', Times, serif;
-
-}
-
-#callimg{
-    width: 7%;
-    padding-left:2%;
-    vertical-align: 90%;
-}
-
 .mainbar{
 padding-left: 16%;
     height: 20%;
     padding-top: 10px;
 }
-#logo{
-
-    width: 12%;
-}
-
-#search{
-    text-align: center;
-    width: 50%;
-    vertical-align: 100%;
-    border-style: solid;
-    border-radius: 7px;
-    height: 40px;
-    font-size: 15px;
-    font-weight: bolder;
-    border: none;
-    background-color: rgba(150, 150, 220, 0.3);   
-    outline-color : rgb(104, 107, 116);
-}
-
 
 
 .mainicon{
@@ -387,29 +321,7 @@ padding-left: 16%;
 }
 
 
-.container{
-    margin-left:auto;
-    margin-right:auto;
-}
-@media(min-width:768px){
-    .container{
-        width: 750px;
-        
-    }
-  }
-  
-  @media(min-width:992px){
-      .container{
-          width: 970px;
-  
-      }
-    }
-    @media(min-width:1200px){
-      .container{
-          width: 1170px;
-        
-      }
-    }
+
     .icon{
         font-size: 45px;
         margin: 0 10px;
@@ -419,88 +331,8 @@ padding-left: 16%;
     .icon:hover{
         color: black;
     }
-    .dropdownmenu ul {
-        float: left;
-        list-style: none;
-        width: 100%;
-    }
-    .dropdownmenu li {
-        float: left;
-        position: relative;
-        width:auto;
-    }
-    .dropdownmenu a {
-        background: white;
-        color: black;
-        display: block;
-        font: bold 12px/20px sans-serif;
-        padding: 10px 25px;
-        text-align: center;
-        font-size: 20px;
-        text-decoration: none;
-        -webkit-transition: all .25s ease;
-        -moz-transition: all .25s ease;
-        -ms-transition: all .25s ease;
-        -o-transition: all .25s ease;
-        transition: all .25s ease;
-    }
-   
-.dropdownmenu{
-   padding: 20px 0;
-}
-    .dropdownmenu ul, .dropdownmenu li {
-        margin: 0;
-        padding: 0;
-    }
-    .dropdownmenu li:hover a {
-        background: #fc0;
-    }
-    #submenu {
-        color: white;
-        left: 0;
-        opacity: 0;
-        position: absolute;
-        top: 35px;
-        visibility: hidden;
-        z-index: 1;
-    }
-    li:hover ul#submenu {
-        opacity: 1;
-        top: 40px;	
-        visibility: visible;
-    }
-    #submenu li {
-        float: none;
-        width: 100%;
-    }
-    #submenu a:hover {
-        background: #fc0;
-    }
-    #submenu a {
-        background-color:#000000;
-        color: white;
-    }
-.ads{
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-content: center;
 
-}
-.ads div{
-    margin: 10px;
-}
-.ads img{
-    width: 100%;
-    min-width: 100%;
-    min-height: 100%;
-    border-radius: 35px;
-    cursor: pointer;
-}
-.ads img:hover{
-    transform: scale(1.1);
-    transition: 1s;
-}
+
 
 
 /* start artivles */
@@ -537,19 +369,7 @@ padding-left: 16%;
 .box .rate img{
     width: 20px;
 }
-.btnmore{
-    background-color: #fc0;
-    color: black;
-    font-size: 50px;
-    text-align: center;
-    padding: 40px 0;
-    margin-top: 70px;
-}
-.btnmore a{
-    text-decoration: none;
-    color: black;
-    cursor: pointer;
-}
+
 
 #smlimg{
     
@@ -590,19 +410,6 @@ padding-left: 16%;
 #bigimg:hover{
     opacity: 0.8;
 }
-#slider{
-    width: 50%;
-    border-radius: 12px;
-    box-shadow: 3px 3px 10px rgb(223, 220, 195);
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-    margin-top: 3%;
-}
-#slider:hover{
-    opacity: 0.8;
-}
-
 .offers{
     display: block;
     margin-left: auto;
@@ -634,15 +441,6 @@ padding-left: 16%;
 
 /* image styling in card*/
 
-
-
-
-.before{
-    text-decoration:line-through;
-}
-.after{
-    font-weight: bold;
-}
 .info{
     margin-left: 15px;
     margin-top: 15px;
@@ -660,13 +458,7 @@ padding-left: 16%;
     width: 25px;
 }
 
-.newarrivals{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 60%;
-    margin-top: 3%;
-}
+
 
 .appdiv{
     background-color: rgb(173, 113, 0);
