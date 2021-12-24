@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="mystyles.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
+    <title>test</title>
+    
+</head>
+<body onload="search()" onunload="close()">
+    <div class="articles">
+        <h2>  Products </h2>
+        <div id="boxs" class="container">
+
+        </div>
+    </div>
+   
+        <script >
+function search(){
+    if(localStorage.getItem('searchWord')){
+        var xhr = new XMLHttpRequest();
+        xhr.open("GET", "products.json");
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState == 4) {
+                if (xhr.status == 200) {
+                    var jsobj = JSON.parse(xhr.response);
+                    for(let i=0 ;i<jsobj.length ;i++){
+                        var desc= jsobj[i].title.toUpperCase(); 
+                        if(desc.indexOf(localStorage.getItem('searchWord'))>=0) {
+                              display(jsobj,i);
+                        } 
+                    }
+
+                }}}
+                xhr.send();
+    }
+}
+function close(){
+  localStorage.removeItem("searchWord");
+}
+function display(jsobj,i){
+    var box = document.createElement('div');
+            box.className = "box";
+            var img = document.createElement('img');
+            img.className = "imgproduct";
+            img.src = jsobj[i].image;
+
+            box.appendChild(img);
+            var rate = document.createElement('div');
+            rate.className = "rate";
+
+            for (let j = 0; j < jsobj[i].rating.rate; j++) {
+                var imgrate = document.createElement('img');
+                imgrate.src = "./media/star.png";
+                rate.appendChild(imgrate);
+            }
+            box.appendChild(rate);
+            var info = document.createElement('div');
+            var title = document.createElement('h4');
+            title.innerHTML = jsobj[i].title;
+            info.appendChild(title);
+            var info2 = document.createElement('div');
+            info2.className="info";
+            info2.classList.add("row");
+            var price = document.createElement('span');
+            price.className="col-6";
+            price.innerHTML = jsobj[i].price + "LE";
+            info2.appendChild(price);
+            var Tocard = document.createElement('a');
+            Tocard.className="col-6";
+            Tocard.addEventListener('click',function(){
+                    addtolocalstorag(i);
+            });
+            var icon = document.createElement('i');
+            icon.className = "fas fa-shopping-cart icon";
+            Tocard.appendChild(icon);
+            info2.appendChild(Tocard);
+            info.appendChild(info2)
+            box.appendChild(info);
+            boxs.appendChild(box);
+                                       }
+function  addtolocalstorag(index){
+      var user = localStorage.getItem("username");
+      if(localStorage.getItem(user)){
+        var x=  JSON.parse( localStorage.getItem(user));
+        x.push(index)
+      
+        localStorage.setItem(user,JSON.stringify(x));
+      }
+      else{
+        var data=[];
+        data.push(index);
+        localStorage.setItem(user,JSON.stringify(data));
+      }
+    }
+      </script>
+
+     
+</body>
+</html>

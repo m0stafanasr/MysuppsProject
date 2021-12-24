@@ -38,7 +38,7 @@ function submit() {
 
 
     xhr.open("GET", "usrnames.json");
-    xhr.send("")
+    xhr.send("");
 
 
 }
@@ -104,6 +104,8 @@ function showsupp(c){
 
 /*view products*/
 function viewSupps() {
+    var word=  document.getElementById("search");
+    var reg = /[a-zA-z]{4,}/;
     var xhr = new XMLHttpRequest();
     xhr.open("GET", "products.json");
     xhr.onreadystatechange = function () {
@@ -111,6 +113,17 @@ function viewSupps() {
             if (xhr.status == 200) {
                 var jsobj = JSON.parse(xhr.response);
                 Display(jsobj);
+                ///////////////////////////////
+                word.addEventListener('blur',function(){
+                 if( reg.test(word.value)==true){
+                     localStorage.setItem("searchWord",word.value.toUpperCase());
+                      window.open("searched.html");  
+                 }
+                 else{
+                   alert("can't search");
+                 }
+                 
+                   });
             }
         }
     }
@@ -179,3 +192,6 @@ function viewSupps() {
 }
 
 viewSupps();
+
+
+ 
