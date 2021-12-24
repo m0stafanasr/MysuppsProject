@@ -88,7 +88,7 @@ function showsupp(c){
                 return o.category == product;
             });
             if(obj==null){
-                alert("fi 8aga 3'lt")
+                alert("fi 7aga 3'lt")
             }else{
                 console.log(obj);
             }
