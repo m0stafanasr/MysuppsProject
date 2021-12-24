@@ -112,9 +112,22 @@ function viewSupps() {
         if (xhr.readyState == 4) {
             if (xhr.status == 200) {
                 var jsobj = JSON.parse(xhr.response);
-                Display(jsobj);
+                for (let i = 0; i < 10; i++) {
+                    Display(jsobj,i);
+                }
+               word.addEventListener('keypress',function(event){
+                   if(event.keyCode == 13){
+                    if( reg.test(word.value)==true){
+                        localStorage.setItem("searchWord",word.value.toUpperCase());
+                         window.open("searched.html");  
+                    }
+                    else{
+                        alert("word is small");
+                      }
+                   }
+               });
                 ///////////////////////////////
-                word.addEventListener('blur',function(){
+              /*  word.addEventListener('blur',function(){
                  if( reg.test(word.value)==true){
                      localStorage.setItem("searchWord",word.value.toUpperCase());
                       window.open("searched.html");  
@@ -123,75 +136,100 @@ function viewSupps() {
                    alert("can't search");
                  }
                  
-                   });
+                   });*/
             }
         }
     }
     xhr.send();
-    var boxs = document.getElementById('boxs');
-    function Display(jsobj) {
-
-        for (let i = 0; i < 10; i++) {
-            var box = document.createElement('div');
-            box.className = "box";
-            var img = document.createElement('img');
-            img.className = "imgproduct";
-            img.src = jsobj[i].image;
-
-            box.appendChild(img);
-            var rate = document.createElement('div');
-            rate.className = "rate";
-
-            for (let j = 0; j < jsobj[i].rating.rate; j++) {
-                var imgrate = document.createElement('img');
-                imgrate.src = "./media/star.png";
-                rate.appendChild(imgrate);
-            }
-            box.appendChild(rate);
-            var info = document.createElement('div');
-            var title = document.createElement('h4');
-            title.innerHTML = jsobj[i].title;
-            info.appendChild(title);
-            var info2 = document.createElement('div');
-            info2.className="info";
-            info2.classList.add("row");
-            var price = document.createElement('span');
-            price.className="col-6";
-            price.innerHTML = jsobj[i].price + "LE";
-            info2.appendChild(price);
-            var Tocard = document.createElement('a');
-            Tocard.className="col-6";
-            Tocard.addEventListener('click',function(){
-                    addtolocalstorag(i);
-            });
-            var icon = document.createElement('i');
-            icon.className = "fas fa-shopping-cart icon";
-            Tocard.appendChild(icon);
-            info2.appendChild(Tocard);
-            info.appendChild(info2)
-            box.appendChild(info);
-            boxs.appendChild(box);
-        }
-
-    }
-  function  addtolocalstorag(index){
-      var user = localStorage.getItem("username");
-      if(localStorage.getItem(user)){
-        var x=  JSON.parse( localStorage.getItem(user));
-        x.push(index)
-      
-        localStorage.setItem(user,JSON.stringify(x));
-      }
-      else{
-        var data=[];
-        data.push(index);
-        localStorage.setItem(user,JSON.stringify(data));
-      }
-      
-  }
+   
+ 
 }
+var boxs = document.getElementById('boxs');
+function Display(jsobj,i) {
 
-viewSupps();
+   
+        var box = document.createElement('div');
+        box.className = "box";
+        var img = document.createElement('img');
+        img.className = "imgproduct";
+        img.src = jsobj[i].image;
+
+        box.appendChild(img);
+        var rate = document.createElement('div');
+        rate.className = "rate";
+
+        for (let j = 0; j < jsobj[i].rating.rate; j++) {
+            var imgrate = document.createElement('img');
+            imgrate.src = "./media/star.png";
+            rate.appendChild(imgrate);
+        }
+        box.appendChild(rate);
+        var info = document.createElement('div');
+        var title = document.createElement('h4');
+        title.innerHTML = jsobj[i].title;
+        info.appendChild(title);
+        var info2 = document.createElement('div');
+        info2.className="info";
+        info2.classList.add("row");
+        var price = document.createElement('span');
+        price.className="col-6";
+        price.innerHTML = jsobj[i].price + "LE";
+        info2.appendChild(price);
+        var Tocard = document.createElement('a');
+        Tocard.className="col-6";
+        Tocard.addEventListener('click',function(){
+                addtolocalstorag(i);
+        });
+        var icon = document.createElement('i');
+        icon.className = "fas fa-shopping-cart icon";
+        Tocard.appendChild(icon);
+        info2.appendChild(Tocard);
+        info.appendChild(info2)
+        box.appendChild(info);
+        boxs.appendChild(box);
+    
+
+}
+function  addtolocalstorag(index){
+    var user = localStorage.getItem("username");
+    if(localStorage.getItem(user)){
+      var x=  JSON.parse( localStorage.getItem(user));
+      x.push(index)
+    
+      localStorage.setItem(user,JSON.stringify(x));
+    }
+    else{
+      var data=[];
+      data.push(index);
+      localStorage.setItem(user,JSON.stringify(data));
+    }
+    
+}
+// function search on products
+function search(){
+    if(localStorage.getItem('searchWord')){
+        var xhr = new XMLHttpRequest();
+        xhr.open("GET", "products.json");
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState == 4) {
+                if (xhr.status == 200) {
+                    var jsobj = JSON.parse(xhr.response);
+                    for(let i=0 ;i<jsobj.length ;i++){
+                        var desc= jsobj[i].title.toUpperCase(); 
+                        if(desc.indexOf(localStorage.getItem('searchWord'))>=0) {
+                              Display(jsobj,i);
+                        } 
+                    }
+
+                }}}
+                xhr.send();
+    }
+}
+//when close search page -> remove it from local storage
+function close(){
+    localStorage.removeItem("searchWord");
+  }
+
 
 
  
