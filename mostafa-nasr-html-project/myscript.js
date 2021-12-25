@@ -111,7 +111,15 @@ function showsupp(c) {
     xhr.send("");
 
 }
-
+ function menufunction(){
+     var x = document.getElementById('mynav');
+     if(x.className=="dropdownmenu"){
+         x.className+=" responsive";
+     }
+     else{
+         x.className="dropdownmenu";
+     }
+ }
 
 
 
