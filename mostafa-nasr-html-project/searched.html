@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="mystyles.css">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
-    <title>test</title>
+    <title>search results</title>
     
 </head>
 <body onload="search()" onunload="close()">
@@ -103,6 +103,12 @@ function display(jsobj,i){
             Tocard.addEventListener('click',function(){
                     addtolocalstorag(i);
             });
+
+            box.addEventListener('click', function(){
+            addlocal(i);
+            window.open("details.html","_self");
+            
+        })
             var icon = document.createElement('i');
             icon.className = "fas fa-shopping-cart icon";
             Tocard.appendChild(icon);
@@ -110,7 +116,10 @@ function display(jsobj,i){
             info.appendChild(info2)
             box.appendChild(info);
             boxs.appendChild(box);
-                                       }
+            function addlocal(index){
+                localStorage.setItem("productID", index )
+            }                           
+        }
       </script>
 </body>
 </html>

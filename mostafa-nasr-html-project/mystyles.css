@@ -487,3 +487,97 @@ background-color: #fff;
     -ms-border-radius: 8px;
     -o-border-radius: 8px;
 }
+
+
+/* details page*/
+.cont{
+	width: 80%;
+	margin:auto;
+    
+}
+/*start header det*/
+.hd{
+	display: flex;
+	flex-direction: row;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+ .slid_img{
+	width: 10%;
+}
+
+.d_tab #name{
+    margin-bottom: 20px;
+}
+.d_img{
+	width: 30%;
+	 
+} 
+.d_img img{
+	width: 100%
+} 
+.hd .d_tab{
+	width: 40%;
+	 
+}
+.hd .d_tab h5{
+	opacity: 0.6;
+	margin-top: 7%;
+	
+}
+.hd .d_tab .h5_two{
+	margin-top:0px; 
+	margin-bottom: 7%
+
+}
+.hd table{
+  width: 100%;
+   
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+.hd table tr:nth-child(odd) {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+.hd table tr{
+margin-bottom: 1%;
+padding: 0.3rem
+}
+.hd table tr td{
+	padding: 0.3rem;
+
+}
+.buy{
+	display: flex;
+	flex-direction: row;
+	margin-top: 21%
+}
+.buy p{
+	width: 10%
+}
+
+#price{
+    margin-right: 10%;
+}
+
+.buy #add_card{
+	width: 50%;
+	padding: 2%;
+	background-color:#f79022;
+	border-style: none;
+	border-radius: 1% 
+}
+/*end details header*/
+/*start descriptin details*/
+.des{
+	display: flex;
+	flex-direction: column;
+}
+.des h2{
+	margin-bottom: 2%
+}
+.des p{
+	color: rgb(48, 48, 48);
+    font-family: "Neuzeit S", sans-serif;
+    font-size: 14px;
+}

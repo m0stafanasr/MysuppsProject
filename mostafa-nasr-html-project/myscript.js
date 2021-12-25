@@ -97,7 +97,7 @@ function showsupp(c) {
             function productname(o) {
                 return o.category == product;
             }
-            
+            console.log(jsObj[2].id)
 
            window.open("products.html", "_self");
             console.log(obj);
@@ -163,7 +163,7 @@ function viewSupps() {
 var boxs = document.getElementById('boxs');
 function Display(jsobj,i) {
 
-   
+    localStorage.setItem("cat",JSON.stringify(jsobj) );
         var box = document.createElement('div');
         box.className = "box";
         var img = document.createElement('img');
@@ -196,14 +196,21 @@ function Display(jsobj,i) {
         Tocard.addEventListener('click',function(){
                 addtolocalstorag(i);
         });
+        box.addEventListener('click', function(){
+            addlocal(i);
+            window.open("details.html","_self");
+        })
         var icon = document.createElement('i');
         icon.className = "fas fa-shopping-cart icon";
+        
         Tocard.appendChild(icon);
         info2.appendChild(Tocard);
         info.appendChild(info2)
         box.appendChild(info);
         boxs.appendChild(box);
-    
+        function addlocal(index){
+            localStorage.setItem("productID", index )
+        }
 
 }
 function  addtolocalstorag(index){
@@ -221,6 +228,8 @@ function  addtolocalstorag(index){
     }
     
 }
+
+
 // function search on products
 function search(){
     if(localStorage.getItem('searchWord')){
@@ -236,7 +245,7 @@ function search(){
                               Display(jsobj,i);
                         } 
                     }
-
+                    localStorage.setItem("cat",JSON.stringify(jsobj) );
                 }}}
                 xhr.send();
     }

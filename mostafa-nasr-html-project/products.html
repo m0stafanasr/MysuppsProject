@@ -143,6 +143,11 @@
             Tocard.addEventListener('click',function(){
                     addtolocalstorag(i);
             });
+
+            box.addEventListener('click', function(){
+            addlocal(i);
+            window.open("details.html","_self");
+        })
             var icon = document.createElement('i');
             icon.className = "fas fa-shopping-cart icon";
             Tocard.appendChild(icon);
@@ -150,9 +155,13 @@
             info.appendChild(info2)
             box.appendChild(info);
             show.appendChild(box);
+            function addlocal(index){
+    localStorage.setItem("productID", index )
+}
         }
+        
         display1(obj);
-        document.getElementById("title").innerHTML = obj[1].category.value;
+       // document.getElementById("title").innerHTML = obj[1].category.value;
     </script>
     <script src="myscript.js"></script>
     </body>
