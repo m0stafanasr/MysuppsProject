@@ -12,28 +12,27 @@
     <title>My Sussps</title>
 </head>
 
-<body onload="viewSupps()">
-        <div class="bar" id="offersBar">
-            <span id="text"> transform your body with special offers</span>
-            <span><img src="./media/offer.png" id="offersimg"></span>
-            <span> <img src="./media/callus.png" id="callimg"></span>
-        </div>
-    
-        <div class="mainbar">
-            <div class="container">
-                <a id="logo"><img src="./media/logo.jpg" id="logo"></a>
-                <input type="search" placeholder="search" id="search">
-                <a href="#"><i class="fas fa-shopping-cart icon"></i></a>
-                <div style="display: inline-block;">
+<body  onload="viewSupps()" >
+    <div class="bar" id="offersBar">
+        <div id="text"> transform your body with special offers</div>
+        <div class="offerbar"><img src="./media/offer.png" id="offersimg"></div>
+        <div class="offerbar"> <img src="./media/callus.png" id="callimg"></div>
+    </div>
+
+    <div class="mainbar">
+        <div class="container">
+            <a id="logo"><img src="./media/logo.jpg" id="logo"></a>
+            <input type="search" placeholder="search" id="search">
+            <a href="#"><i class="fas fa-shopping-cart icon"></i></a>
+            <div style="display: inline-block;">
                 <a href="login.html"> <i class="fas fa-user icon" onmouseover="show()"> </i></a>
                 <div id="loginbar" onmouseleave="hide()">
                     welcome!
                     <a href="login.html"><button id="loginbutton" style="display: block;">Login</button></a>
-                    <a href="login.html"><button id="logoutbutton" style="display: none;" onclick="logout()">Logout</button></a>
+                    <a href="login.html"><button id="logoutbutton" style="display: none;"
+                            onclick="logout()">Logout</button></a>
                 </div>
-        </div>
             </div>
-    
         </div>
         <div  id="stick">
          <div class="container">
@@ -62,6 +61,36 @@
         </div> 
    
 
+    </div>
+    <div>
+        <div class="container">
+        <nav class="dropdownmenu">
+             <ul>
+            <li><a href="myindex.html">Home</a></li>
+           <li><a href="">New Arrivals</a></li>
+           <li><a href="#">Shop products</a>
+               <ul id="submenu">
+                  <li><a href="proteins.html" onclick="showsupp(this)">proteins</a></li>
+                  <li><a href="" onclick="showsupp(this)">protein bar</a></li>
+                  <li><a href="" onclick="showsupp(this)">pre-workout</a></li>
+                  <li > <a href="" onclick="showsupp(this)">creatine</a> </li>
+                  <li ><a href="" onclick="showsupp(this)">weight-loss</a> </li>
+                  <li> <a href="" onclick="showsupp(this)">vitamins</a> </li>
+               </ul>
+               </li>
+               
+               <li ><a href="#" >Blog</a></li>
+               <li ><a href="#" >About us</a></li>
+               <li ><a href="#" >Legal</a></li>
+               <li ><a href="#" >Contact Us</a></li>
+               <li><a href="#" >Our Stores</a></li>
+           </ul>
+       </nav>
+       </div>  
+       </div> 
+
+
+    <div id="stick">
         <div class="container">
             <div class="row">
                         <div class="col-6">
@@ -100,36 +129,39 @@
 
         </div>
     </div>
+    <div id="body"></div>
 
     <div style="padding: 35px;">
         <a href="#"> <img src="./media/slider4.webp" id="slider"> </a>
     </div>
     <div class="footer">
-     <div class="container">
-           <div class="row">
-                 <div class="footer-col">
-                    <img src="./media/logo.jpg" id="logofooter">
-                    <p>Musupps® is the major player in the supplements field and we are proud to be the number one supplement store in Egypt. We are proud that we are the
-                         first supplement provider in Egypt since 2009, many stores all over Egypt & we are growing daily..</p>
-                 </div>
-                 <div class="footer-col">
-                   <h2>Quick links</h2>
-                   <ul >
-                       <li ><a href="#" title="">About us</a></li>
-                       <li class=""><a href="" title="">Our stores</a></li>
-                       <li class=""><a href="" title="">Terms&conditions</a></li>
-                      </ul>
-                 </div>
-                 <div class="footer-col">
-                        <h2>CONNECT</h2>
-                        <div class="social-links">
-                             <a href="#"><i class="fab fa-facebook"></i></a>
-                             <a href="#"><i class="fab fa-instagram"></i></a>
-                             <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                            
-                        </div>
-                 </div>
-           </div>
+        <div class="container">
+            <div class="row">
+                <div class="footer-col">
+                    <img src="./media/logo.png" id="logofooter">
+                    <p>Musupps® is the major player in the supplements field and we are proud to be the number one
+                        supplement store in Egypt. We are proud that we are the
+                        first supplement provider in Egypt since 2009, many stores all over Egypt & we are growing
+                        daily..</p>
+                </div>
+                <div class="footer-col">
+                    <h2>Quick links</h2>
+                    <ul>
+                        <li><a href="#" title="">About us</a></li>
+                        <li class=""><a href="" title="">Our stores</a></li>
+                        <li class=""><a href="" title="">Terms&conditions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h2>CONNECT</h2>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+
+                    </div>
+                </div>
+            </div>
         </div>
 
     </div>

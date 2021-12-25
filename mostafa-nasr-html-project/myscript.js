@@ -29,7 +29,7 @@ function submit() {
             } else {
                 alert("welcome  " + user)
                 window.open("myindex.html", "_self");
-                
+
             }
 
         }
@@ -52,8 +52,8 @@ function hide() {
 
 }
 
-function control(){
-    if(sessionStorage.username!=null && sessionStorage.username!=null){
+function control() {
+    if (sessionStorage.username != null && sessionStorage.username != null) {
         document.getElementById("loginbutton").style.display = "none";
         document.getElementById("logoutbutton").style.display = "block";
         console.log("SDdsfsdf")
@@ -61,44 +61,55 @@ function control(){
 }
 control()
 
-function logout(){
+function logout() {
     document.getElementById("loginbutton").style.display = "block";
-        document.getElementById("logoutbutton").style.display = "none";
-        sessionStorage.removeItem("username");
-        sessionStorage.removeItem("password");
-        localStorage.removeItem("username");
-        localStorage.removeItem("password");
-        location.reload();
+    document.getElementById("logoutbutton").style.display = "none";
+    sessionStorage.removeItem("username");
+    sessionStorage.removeItem("password");
+    localStorage.removeItem("username");
+    localStorage.removeItem("password");
+    location.reload();
 }
+
+
+
 
 /*display protein*/
 
-function showsupp(c){
-
+function showsupp(c) {
+    debugger;
+    var arr = [];
     var product = c.innerHTML;
-    
+
+
+
+
+    console.log(arr)
     var xhr = new XMLHttpRequest();
+
+
     xhr.onreadystatechange = function () {
         if (xhr.readyState == 4 && xhr.status == 200) {
             jsonObj = xhr.responseText;
             jsObj = JSON.parse(jsonObj);
-            debugger;
-            
-            let obj = jsObj.find(function (o) {
+
+            let obj = jsObj.filter(productname);
+            function productname(o) {
                 return o.category == product;
-            });
-            if(obj==null){
-                alert("fi 7aga 3'lt")
-            }else{
-                console.log(obj);
             }
-              
+            
+
+           window.open("products.html", "_self");
+            console.log(obj);
+            localStorage.setItem("cat",JSON.stringify(obj) );
         }
+        
+        
     }
-
-
+   
     xhr.open("GET", "products.json");
-    xhr.send("")
+    xhr.send("");
+
 }
  function menufunction(){
      var x = document.getElementById('mynav');
@@ -109,6 +120,11 @@ function showsupp(c){
          x.className="dropdownmenu";
      }
  }
+
+
+
+
+
 
 /*view products*/
 function viewSupps() {
@@ -237,7 +253,3 @@ function search(){
 function close(){
     localStorage.removeItem("searchWord");
   }
-
-
-
- 
