@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
         integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous">
     <link rel="stylesheet" href="mystyles.css">
-    <title>Document</title>
+    <title>My Sussps</title>
 </head>
 
 <body onload="viewSupps()">
@@ -35,12 +35,11 @@
             </div>
     
         </div>
-        
         <div  id="stick">
          <div class="container">
-         <nav class="dropdownmenu">
-              <ul>
-             <li><a href="myindex.html">Home</a></li>
+         <nav class="dropdownmenu" id="mynav">
+              <ul class="navbar" >
+             <li class="active"><a href="myindex.html">Home</a></li>
             <li><a href="">New Arrivals</a></li>
              <li><a href="#">Shop products</a>
                 <ul id="submenu">
@@ -52,12 +51,11 @@
                    <li> <a href="" onclick="showsupp(this)">vitamins</a> </li>
                 </ul>
                 </li>
-                
                 <li ><a href="#" >Blog</a></li>
                 <li ><a href="#" >About us</a></li>
                 <li ><a href="#" >Legal</a></li>
-                <li ><a href="#" >Contact Us</a></li>
                 <li><a href="#" >Our Stores</a></li>
+                <li class="menuicon" onclick="menufunction()"><a ><i class="fas fa-ellipsis-v"></i></a></li>
             </ul>
         </nav>
         </div>  

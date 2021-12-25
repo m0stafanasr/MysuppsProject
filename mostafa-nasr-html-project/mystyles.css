@@ -122,8 +122,10 @@ padding-left: 16%;
         padding: 0;
     }
     .dropdownmenu li:hover a {
-        background: #fc0;
-        
+        background: #fc0;  
+    }
+    .dropdownmenu .menuicon a:hover{
+        background-color: transparent;
     }
     #submenu {
         color: white;
@@ -166,6 +168,32 @@ padding-left: 16%;
         opacity: 1;
         
     }
+    .navbar .menuicon{
+        display: none;
+    }
+    @media screen and (max-width: 700px) {
+        .navbar li:not(:first-child) {display: none;}
+        .navbar .active a {background-color:#fc0;border-radius: 20px; margin-left: 15px;}
+        .navbar li.menuicon {
+          float: right;
+          display: block;
+        }
+        .dropdownmenu.responsive {position: relative;}
+        .dropdownmenu.responsive .menuicon {
+            position: absolute;
+            right: 0px;
+            top: 19px;
+        }
+        .dropdownmenu.responsive .menuicon a{
+            border-radius: 25px;
+        }
+        }
+        .dropdownmenu.responsive li {
+          float: none;
+          display: block;
+          text-align: left;
+        }
+      
 /* start cards */
 
 

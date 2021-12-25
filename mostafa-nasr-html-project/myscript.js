@@ -100,7 +100,15 @@ function showsupp(c){
     xhr.open("GET", "products.json");
     xhr.send("")
 }
-
+ function menufunction(){
+     var x = document.getElementById('mynav');
+     if(x.className=="dropdownmenu"){
+         x.className+=" responsive";
+     }
+     else{
+         x.className="dropdownmenu";
+     }
+ }
 
 /*view products*/
 function viewSupps() {
