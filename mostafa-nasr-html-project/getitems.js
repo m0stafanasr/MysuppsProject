@@ -14,13 +14,19 @@ xhr.onreadystatechange = function(){
 xhr.send();
 
 function display(js){
+var myarr=[];
 
+var q;
   var username= localStorage.getItem("username");
   if(localStorage.getItem(username)){
       console.log(username);
       var userproduct= JSON.parse(localStorage.getItem(username));
       var x = document.getElementById('userproducts');
       for(let i=0;i<userproduct.length;i++){
+          if(myarr.filter(e => e==userproduct[i]).length<1){
+                 q = userproduct.filter(e => e==userproduct[i]).length;
+                 myarr.push(q);
+          
           var item = document.createElement('div');
           item.className="row";
           var anchor = document.createElement('a');
@@ -40,16 +46,16 @@ function display(js){
               var divbtn = document.createElement('div');
               divbtn.className='col-4';
               var plusbtn = document.createElement('button');
-              plusbtn.onclick=add();
+              
               var plusicon = document.createElement('i');
               plusicon.className="fas fa-plus";
               plusbtn.appendChild(plusicon);
                  divbtn.appendChild(plusbtn);
               
-
+                
               var qnt = document.createElement('input');
               qnt.type='text';
-              qnt.value=5;
+              qnt.value=q;
               qnt.className="inp";
                 divbtn.appendChild(qnt);
               var minusbtn = document.createElement('button');
@@ -66,7 +72,7 @@ function display(js){
               price.innerHTML=js[userproduct[i]].price+"LE";
                item.appendChild(price);
               x.appendChild(item);
-
+          }
       }
       
   }
