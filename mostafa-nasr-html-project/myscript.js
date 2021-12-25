@@ -204,7 +204,11 @@ function Display(jsobj,i) {
         Tocard.addEventListener('click',function(){
                 addtolocalstorag(i);
         });
-        box.addEventListener('click', function(){
+        title.addEventListener('click', function(){
+            addlocal(i);
+            window.open("details.html","_self");
+        })
+        img.addEventListener('click', function(){
             addlocal(i);
             window.open("details.html","_self");
         })

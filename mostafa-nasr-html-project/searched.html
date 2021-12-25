@@ -104,10 +104,13 @@ function display(jsobj,i){
                     addtolocalstorag(i);
             });
 
-            box.addEventListener('click', function(){
+            title.addEventListener('click', function(){
             addlocal(i);
             window.open("details.html","_self");
-            
+        })
+        img.addEventListener('click', function(){
+            addlocal(i);
+            window.open("details.html","_self");
         })
             var icon = document.createElement('i');
             icon.className = "fas fa-shopping-cart icon";
